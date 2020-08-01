@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#2C2626">
+
+    <LinearLayout
+        android:layout_marginRight="90dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/LL_login"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
+            android:id="@+id/btn_loginNaver"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+        <Button
+            android:id="@+id/btngetapi"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="api 호출"
+            android:background="#447BD8"
+            android:textColor="#ffffff"
+            />
+        <Button
+            android:id="@+id/btnlogout"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그아웃"
+            android:textColor="#000000"
+            android:background="#F8E107"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

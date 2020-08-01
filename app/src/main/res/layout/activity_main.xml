@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#1D1B1B">
+
+    <LinearLayout
+        android:id="@+id/ll_topSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="검색"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/ll_topSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <GridLayout
+                android:id="@+id/gl_summonerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:rowCount="3"
+                android:columnCount="2"
+                android:orientation="vertical"
+                android:background="#000000">
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/cpimg17"
+                    android:layout_rowSpan="3"/>
+
+                <Button
+                    android:id="@+id/btn_invaildate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="right"
+                    android:text="전적갱신"
+                    android:textSize="12dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_summonerName"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:text="name"
+                    android:textSize="25dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/tv_summonerLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Lv 0"/>
+
+                    <TextView
+                        android:id="@+id/tv_summonerWInRate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="랭크 : 0승 0패"/>
+
+                </LinearLayout>
+            </GridLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tierInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gl_summonerInfo"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:background="#0A0000">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="솔로랭크 5x5"
+                        android:textColor="#C21616"/>
+                    <ImageView
+                        android:id="@+id/iv_soloRankImg"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tier_unrank"/>
+                    <TextView
+                        android:id="@+id/tv_soloRankTierName"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UNRANK"
+                        android:textColor="#36C216"/>
+                    <TextView
+                        android:id="@+id/tv_soloRankLP"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 LP"/>
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:id="@+id/tv_soloRankWinRate"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0승 0패 (0.00%)"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="자유랭크 5x5"
+                        android:textColor="#C21616"/>
+                    <ImageView
+                        android:id="@+id/iv_freeRankImg"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tier_unrank"/>
+                    <TextView
+                        android:id="@+id/tv_freeRankTierName"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UNRANK"
+                        android:textColor="#36C216"/>
+                    <TextView
+                        android:id="@+id/tv_freeRankLP"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 LP"/>
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:id="@+id/tv_freeRankWinRate"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0승 0패 (0.00%)"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/Lv_past"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:layout_below="@id/ll_tierInfo"
+                android:layout_marginTop="34dp"
+                android:background="#000000"
+                android:fadingEdge="none"
+                android:dividerHeight="3dp"
+                android:divider="#000000"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

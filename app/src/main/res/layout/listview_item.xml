@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/listview_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/iv_championImg"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/cpimg17"/>
+
+    <Button
+        android:id="@+id/btn_kda"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_toRightOf="@id/iv_championImg"
+        android:layout_alignLeft="@+id/ll_kda"
+        android:layout_above="@id/ll_kda"
+        android:text="kda"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_kda"
+        android:layout_toRightOf="@id/iv_championImg"
+        android:layout_alignBottom="@id/iv_championImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/tv_kills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="킬"
+            android:textSize="15dp"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="데스"
+            android:textSize="15dp"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_assists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="어시"
+            android:textSize="15dp"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+</RelativeLayout>
