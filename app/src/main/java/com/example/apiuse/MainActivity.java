@@ -30,7 +30,7 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    static final String APIKEY = "RGAPI-70e7b6b4-007e-42d0-8dea-431fd6c6e43a";
+    static final String APIKEY = "//";
     static final String ORI_URL_SUMMONER = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
     static final String ORI_URL_LEAGUE = "https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/";
     static final String ORI_URL_ICON = "http://ddragon.leagueoflegends.com/cdn/10.3.1/img/profileicon/";
